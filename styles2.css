@@ -5,7 +5,15 @@
   --OCEAN: #404bbf;
   --GREY: rgba(46, 47, 66, 0.7);
 }
-.body {
+* {
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
@@ -20,6 +28,11 @@
   letter-spacing: 0.54px;
   text-transform: uppercase;
   margin-right: 76px;
+}
+
+header .logo {
+  display: flex;
+  align-self: center;
 }
 
 .logo span {
@@ -253,23 +266,20 @@ h1 {
   margin-right: auto;
   margin-left: auto;
 }
-.container .d-flex {
-  display: flex;
-  align-items: center;
-}
 
 .d-flex {
   display: flex;
+}
+
+.header-container {
+  display: flex;
   align-items: center;
 }
 
-.header {
-  justify-content: space-around;
-  align-items: center;
-}
-.header .d-flex {
-  align-items: center;
-  gap: 40px;
+.desktop-contacts {
+  margin-left: auto;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 .section {
@@ -368,6 +378,11 @@ h1 {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+
+.list-section ul {
+  flex-wrap: wrap;
+}
+
 .section-title {
   text-align: center;
   font-family: Roboto;
@@ -400,57 +415,51 @@ h1 {
 .strategy {
   list-style-type: none;
   font-family: Roboto;
-  margin-left: 150px;
-  margin-right: 24px;
 }
 
 .punctuality {
   list-style-type: none;
   font-family: Roboto;
-  margin-right: 24px;
 }
 
 .diligence {
   list-style-type: none;
   font-family: Roboto;
-  margin-right: 24px;
 }
 
 .technologies {
   list-style-type: none;
   font-family: Roboto;
-  margin-right: 156px;
 }
 
 /* what we do */
 .section {
   justify-content: center;
 }
+
+.what-we-do img {
+  width: 100%;
+}
+
+.what-we-do ul {
+  flex-wrap: wrap;
+}
+
 .rectangle1 {
   list-style-type: none;
   flex-direction: column;
-  width: 360px;
-  height: 300px;
-  margin-left: 130px;
-  margin-right: 24px;
 }
 
 .rectangle2 {
   list-style-type: none;
   flex-direction: column;
   align-items: flex-start;
-  width: 360px;
-  height: 300px;
-  margin-right: 24px;
 }
 
 .rectangle3 {
   list-style-type: none;
   flex-direction: column;
   align-items: flex-start;
-  width: 360px;
-  height: 300px;
-  margin-right: 24px;
 }
 
 /* team styling */
@@ -462,6 +471,8 @@ h1 {
 .team-members {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .team-socials {
@@ -486,7 +497,6 @@ h1 {
   list-style-type: none;
   justify-content: center;
   border-radius: 0px 0px 4px 4px;
-  margin-right: 24px;
   background: var(--WHITE, #fff);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -509,7 +519,8 @@ h1 {
 }
 
 .team-caption {
-  padding: 32px 0px;
+  padding: 32px 20px;
+  text-align: center;
 }
 .designer {
   font-family: Roboto;
@@ -577,29 +588,38 @@ h1 {
   letter-spacing: 0.32px;
 }
 /* footer styling */
-footer.logo {
+footer {
   font-family: Raleway;
   background-color: var(--NAVY-BLUE);
   color: #f4f4fd;
-  padding-top: 140px;
-  padding-left: 156px;
-  padding-right: 500px;
+  padding-top: 100px;
   padding-bottom: 100px;
-  width: 100%;
-
-  display: flex;
-  gap: 100px;
 }
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 72px;
+}
+
+.customers ul {
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .customer-icon {
   list-style: none;
   text-decoration: none;
   border: 1px solid var(--SLATE);
-  padding: 16px 32px;
-  margin-bottom: 50px;
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: calc(100% / 2 - 30px);
 }
 
 .customer-icon svg {
-  fill: var(--SLATE);
+  fill: var(--IRIS);
 }
 .customer-icon:hover,
 .customer-icon:focus {
@@ -626,6 +646,7 @@ footer.logo {
   font-weight: 400;
   line-height: 24px;
   text-transform: none;
+  color: white;
 }
 
 .input-sub {
@@ -725,9 +746,6 @@ footer.logo {
   gap: 40px;
   justify-content: space-between;
 }
-.main-header-phone-item {
-  display: inline-block;
-}
 
 .main-header-email-item {
   display: inline-block;
@@ -787,8 +805,19 @@ footer.logo {
     margin-right: 0;
     display: block;
   }
-}
-p.socialmedia,
-p.footer-subscribe-text {
-  text-align: center;
+  p.socialmedia,
+  p.footer-subscribe-text {
+    text-align: center;
+  }
+
+  .what-we-do {
+    display: none;
+  }
+
+  .footer-sub {
+    text-align: center;
+  }
+  .btn-sub {
+    margin-top: 24px;
+  }
 }
