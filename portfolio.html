@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="styles2.css" />
   </head>
   <body>
     <header class="container d-flex header">
@@ -20,9 +20,9 @@
 
       <!-- Navigation Options -->
       <nav>
-        <ul class="list">
+        <ul class="portfolio-nav">
           <li class="main-header-link-studio">
-            <a class="studio" href="index.html">Studio</a>
+            <a class="studio" href="index2.html">Studio</a>
           </li>
           <li class="main-header-link-portfolio active">
             <a class="portfolio" href="portfolio.html">Portfolio</a>
@@ -30,8 +30,10 @@
           <li class="main-header-link-contacts">
             <a class="contacts" href="">Contacts</a>
           </li>
+        </ul>
 
-          <!-- Phone and Email info -->
+        <!-- Phone and Email info -->
+        <ul class="portfolio-contacts">
           <li class="main-header-phone-item">
             <a class="email" href="mailto:info@devstudio.com"
               >info@devstudio.com</a
@@ -46,12 +48,12 @@
 
     <main>
       <section class="projects">
-        <div class="list">
-          <button>All</button>
-          <button>Web Site</button>
-          <button>App</button>
-          <button>Design</button>
-          <button>Marketing</button>
+        <div>
+          <button class="project-option">All</button>
+          <button class="project-option">Web Site</button>
+          <button class="project-option">App</button>
+          <button class="project-option">Design</button>
+          <button class="project-option">Marketing</button>
         </div>
         <ul class="list">
           <li class="project">
@@ -213,12 +215,65 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="logo">
-      <a href="" class="logo" style="color: white"><span>WEB</span>STUDIO</a>
-      <p class="footer-desc">
-        Increase the flow of customers and <br />sales for your business with
-        digital <br />marketing & growth solutions.<br />
-      </p>
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            <a href="" class="logo" style="color: white"
+              ><span>WEB</span>STUDIO</a
+            >
+            <p class="footer-desc">
+              Increase the flow of customers and <br />sales for your business
+              with digital <br />marketing & growth solutions.<br />
+            </p>
+          </div>
+
+          <div>
+            <p class="socialmedia">Social Media</p>
+            <div class="team-socials">
+              <a class="team-socials-icon">
+                <svg width="16" height="16" class="team-icons">
+                  <use href="./Images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+              <a class="team-socials-icon">
+                <svg width="16" height="16" class="team-icons">
+                  <use href="./Images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+              <a class="team-socials-icon">
+                <svg width="16" height="16" class="team-icons">
+                  <use href="./Images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+              <a class="team-socials-icon">
+                <svg width="16" height="16" class="team-icons">
+                  <use href="./Images/icons.svg#icon-linkedin2"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-sub">
+            <p class="footer-subscribe-text">Subscribe</p>
+            <form>
+              <input type="text" placeholder="Email" class="input-sub" />
+              <button class="btn-sub">
+                Subscribe
+                <svg width="24" height="24">
+                  <use href="./Images/icons.svg#send"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./js/mobile-menu.js"></script>
   </body>
 </html>
